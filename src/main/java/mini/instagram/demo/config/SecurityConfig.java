@@ -17,6 +17,7 @@ import lombok.extern.slf4j.Slf4j;
 @EnableMethodSecurity
 @RequiredArgsConstructor
 public class SecurityConfig {
+    @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
         log.warn("Configuring http filter chain");
         return null;
