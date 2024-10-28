@@ -1,7 +1,6 @@
 package mini.instagram.demo.config;
 
 import org.springframework.context.annotation.Configuration;
-import org.springframework.boot.autoconfigure.cache.CacheProperties.Redis;
 import org.springframework.context.annotation.Bean;
 import org.springframework.data.redis.cache.RedisCacheConfiguration;
 import org.springframework.data.redis.cache.RedisCacheManager;
