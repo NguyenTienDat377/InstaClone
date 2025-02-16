@@ -36,5 +36,12 @@ public class User implements UserDetails {
     private boolean accountNonExpired;
 
     private boolean accountNonLocked;
-    
+
+    private boolean credentialsNonExpired;
+
+    private String provider;
+
+    private String providerId;
+
+    private boolean enabled;
 }

@@ -26,6 +26,12 @@ public class SessionConfig implements BeanClassLoaderAware {
         mapper.registerModules(SecurityJackson2Modules.getModules(this.loader));
         return mapper;
     }
+    /*
+   * @see
+   * org.springframework.beans.factory.BeanClassLoaderAware#setBeanClassLoader(
+   * java.lang
+   * .ClassLoader)
+   */
     @Override
     public void setBeanClassLoader(ClassLoader classLoader) {
         this.loader = classLoader;
