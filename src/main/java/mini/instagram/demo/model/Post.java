@@ -22,14 +22,14 @@ public class Post {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
-    private int user;
+    private int id;
 
     @ManyToOne
     @JoinColumn(name = "created_by_id", nullable = false)
     @JsonProperty("createdBy")
     private Profile createdBy;
 
-    String imagineUrl;
+    String imageUrl;
     String caption;
     private Date createdAt;
 

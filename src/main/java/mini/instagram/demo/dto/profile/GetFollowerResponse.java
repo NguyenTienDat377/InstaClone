@@ -14,6 +14,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetFollowerResponse {
-    private List<Profile> posts;
+    private List<Profile> profiles;
     private int totalPages;
 }

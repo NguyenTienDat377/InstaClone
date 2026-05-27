@@ -1,12 +1,14 @@
 package mini.instagram.demo.dto.profile;
 
-import lombok.Data;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
 @Builder
+@AllArgsConstructor
 @NoArgsConstructor
 public class FollowUserResponse {
-    
+    private boolean success;
 }

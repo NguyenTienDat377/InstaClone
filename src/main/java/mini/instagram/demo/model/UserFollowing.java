@@ -16,7 +16,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "user_following", uniqueConstraints = {
-    @UniqueConstraint (columnNames = {"followersUserId, followingUserId"})
+    @UniqueConstraint(columnNames = {"followers_user_id", "following_user_id"})
 })
 @Data
 @Builder

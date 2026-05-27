@@ -13,7 +13,5 @@ import java.util.Optional;
 @Repository
 public interface UserRepository extends JpaRepository<User, UUID> {
     @EntityGraph(attributePaths = "authorities")
-    Optional<User> findByUserName(String username);
-
-    User createUser(User user);
+    Optional<User> findByUsername(String username);
 }

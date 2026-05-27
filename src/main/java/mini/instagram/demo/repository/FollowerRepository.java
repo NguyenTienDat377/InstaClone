@@ -11,18 +11,18 @@ import org.springframework.data.repository.query.Param;
 
 @Repository
 public interface FollowerRepository extends JpaRepository<UserFollowing, Integer> {
-    @Query(value = "SELECT * FROM user_following WHERE follower_user_id = :followerUserId", nativeQuery = true)
-    List<UserFollowing> findByFollowerUserId(@Param(value = "followerUserId") int followerUserId);
+    @Query(value = "SELECT * FROM user_following WHERE followers_user_id = :followersUserId", nativeQuery = true)
+    List<UserFollowing> findByFollowersUserId(@Param(value = "followersUserId") int followersUserId);
 
-    int countByFollowerUserId(int followerUserId);
+    int countByFollowersUserId(int followersUserId);
 
-    @Query(value = "SELECT * FROM user_following WHERE following_user_id = followingUserId", nativeQuery = true)
+    @Query(value = "SELECT * FROM user_following WHERE following_user_id = :followingUserId", nativeQuery = true)
     List<UserFollowing> findByFollowingUserId(@Param(value = "followingUserId") int followingUserId);
 
-    int countByFollowingUser(int followerUserId);
+    int countByFollowingUserId(int followingUserId);
 
-    UserFollowing findByFollowerUserIdAndFollowingUserId(int followerUserId, int followingUserId);
+    UserFollowing findByFollowersUserIdAndFollowingUserId(int followersUserId, int followingUserId);
 
-    void deleteByFollowerUserIdAndFollowingUserId(int followerUseId, int followingUserId);
+    void deleteByFollowersUserIdAndFollowingUserId(int followersUserId, int followingUserId);
 
 }
